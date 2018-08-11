@@ -11,8 +11,6 @@ class AdvancedCustomFieldsPro extends Recipe
 
     protected $url = 'https://connect.advancedcustomfields.com/';
 
-    protected $fileExtension = '.zip';
-
     public function getLatestVersion()
     {
         $client = new Client();
@@ -24,7 +22,7 @@ class AdvancedCustomFieldsPro extends Recipe
 
     public function getDownloadUrl($version)
     {
-        $key = self::getKeyFromEnv();
+        $key = $this->getKeyFromEnv();
         $query = "index.php?p=pro&a=download&k=${key}&t=${version}";
         return $this->url . $query;
     }

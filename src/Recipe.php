@@ -2,6 +2,8 @@
 
 namespace FlyntWP\PremiumPluginDownloader;
 
+use FlyntWP\PremiumPluginDownloader\Exceptions\UndefinedRecipeConstantException;
+use FlyntWP\PremiumPluginDownloader\Exceptions\MissingEnvVarException;
 use GuzzleHttp\Client;
 
 abstract class Recipe
@@ -18,7 +20,7 @@ abstract class Recipe
             $path = tmpfile();
         }
         $client = new Client();
-        $request = $client->request('GET', $this->getDownloadUrl($version), ['sink' => $path]);
+        $client->request('GET', $this->getDownloadUrl($version), ['sink' => $path]);
         return $path;
     }
 
@@ -30,11 +32,15 @@ abstract class Recipe
     protected function getKeyFromEnv($envVar = null)
     {
         if (!isset($envVar)) {
-            $envVar = static::KEY_ENV_VARIABLE;
+            if (defined('static::KEY_ENV_VARIABLE')) {
+                $envVar = static::KEY_ENV_VARIABLE;
+            } else {
+                throw new UndefinedRecipeConstantException('KEY_ENV_VARIABLE');
+            }
         }
         $key = getenv($envVar);
         if (!$key) {
-            throw new MissingKeyException($envVar);
+            throw new MissingEnvVarException($envVar);
         }
         return $key;
     }

@@ -1,13 +1,10 @@
 <?php
 
-namespace FlyntWP\PremiumPluginDownloader;
+namespace FlyntWP\PremiumPluginDownloader\Exceptions;
 
 use Exception;
 
-/**
- * Exception thrown if the ACF PRO key is not available in the environment
- */
-class MissingKeyException extends Exception
+class MissingEnvVarException extends Exception
 {
     public function __construct(
         $envVar = '',
