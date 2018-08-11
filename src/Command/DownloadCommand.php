@@ -64,5 +64,4 @@ class DownloadCommand extends Command
 
         $output->writeln('Successfully downloaded ' . $url);
     }
-
 }

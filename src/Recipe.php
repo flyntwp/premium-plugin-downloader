@@ -22,7 +22,8 @@ abstract class Recipe
         return $path;
     }
 
-    public function getFileExtension () {
+    public function getFileExtension()
+    {
         return $this->fileExtension;
     }
 
