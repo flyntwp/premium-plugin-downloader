@@ -13,6 +13,6 @@
         "webmozart/path-util": "^2.3"
     },
     "autoload": {
-        "psr-4": {"PremiumPluginDownloader\\": "src/"}
+        "psr-4": {"FlyntWP\\PremiumPluginDownloader\\": "src/"}
     }
 }

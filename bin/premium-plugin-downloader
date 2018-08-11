@@ -5,7 +5,7 @@
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use PremiumPluginDownloader\Command\DownloadCommand;
+use FlyntWP\PremiumPluginDownloader\Command\DownloadCommand;
 
 $app = new Application();
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace PremiumPluginDownloader;
+namespace FlyntWP\PremiumPluginDownloader;
 
 use GuzzleHttp\Client;
 

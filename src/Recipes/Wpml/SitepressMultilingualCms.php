@@ -1,8 +1,8 @@
 <?php
 
-namespace PremiumPluginDownloader\Recipes\Wpml;
+namespace FlyntWP\PremiumPluginDownloader\Recipes\Wpml;
 
-use PremiumPluginDownloader\Recipe;
+use FlyntWP\PremiumPluginDownloader\Recipe;
 
 class SitepressMultilingualCms extends Recipe
 {

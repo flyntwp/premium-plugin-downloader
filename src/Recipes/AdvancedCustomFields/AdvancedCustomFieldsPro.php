@@ -1,8 +1,8 @@
 <?php
 
-namespace PremiumPluginDownloader\Recipes\AdvancedCustomFields;
+namespace FlyntWP\PremiumPluginDownloader\Recipes\AdvancedCustomFields;
 
-use PremiumPluginDownloader\Recipe;
+use FlyntWP\PremiumPluginDownloader\Recipe;
 use GuzzleHttp\Client;
 
 class AdvancedCustomFieldsPro extends Recipe

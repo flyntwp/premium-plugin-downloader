@@ -1,6 +1,6 @@
 <?php
 
-namespace PremiumPluginDownloader\Command;
+namespace FlyntWP\PremiumPluginDownloader\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -47,7 +47,7 @@ class DownloadCommand extends Command
         $author = $caseHelper->toPascalCase($authorKebab);
         $plugin = $caseHelper->toPascalCase($pluginKebab);
 
-        $recipeClass = "\\PremiumPluginDownloader\\Recipes\\$author\\$plugin";
+        $recipeClass = "\\FlyntWP\\PremiumPluginDownloader\\Recipes\\$author\\$plugin";
 
         $recipe = new $recipeClass();
 
