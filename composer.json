@@ -9,7 +9,7 @@
     "require": {
         "guzzlehttp/guzzle": "^6.2",
         "nabil1337/case-helper": "^0.1.0",
-        "symfony/console": "^3.3",
+        "symfony/console": "^4.1",
         "webmozart/path-util": "^2.3"
     },
     "autoload": {
