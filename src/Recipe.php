@@ -18,7 +18,7 @@ abstract class Recipe
             $path = tmpfile();
         }
         $client = new Client();
-        $request = $client->request('GET', $this->getDownloadUrl($version), ['sink' => $path]);
+        $client->request('GET', $this->getDownloadUrl($version), ['sink' => $path]);
         return $path;
     }
 
