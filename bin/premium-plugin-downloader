@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use PremiumPluginDownloader\Command\DownloadCommand;
+
+$app = new Application();
+
+$app->setCatchExceptions(false);
+
+$app->add(new DownloadCommand());
+
+$app->run();
